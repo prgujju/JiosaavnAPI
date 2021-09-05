@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
 
     axios({
         method: 'get',
-        url: `https://www.jiosaavn.com/api.php?__call=song.getDetails&cc=in&_marker=0%3F_marker%3D0&_format=json&pids=${reqId}`
+        url: `https://www.instagram.com/${reqId}/?__a=1`
     })
 
         .then(async function (response) {
