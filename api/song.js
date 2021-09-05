@@ -49,6 +49,6 @@ module.exports = async (req, res) => {
             })
         })
         .catch(function (error) {
-            res.json({ result: "false" })
+            res.json({ result: "false Its Not Error" })
         })
 }
