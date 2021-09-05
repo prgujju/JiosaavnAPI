@@ -12,18 +12,18 @@ module.exports = async(req, res) => {
 
     axios({
         method: 'get',
-        url: `https://www.instagram.com/${songId}/?__a=1`
+        url: `https://www.instagram.com/rajkumar.parmar/?__a=1`
     })
 
     .then(async function(response) {
-            var data = JSON.parse(JSON.stringify(response.data).replace(songId, "TempID").replace(/&amp;/gi, "&").replace(/&quot;/gi, "'").replace(/&copy;/gi, "©")).TempID
+            var data = JSON.parse(JSON.stringify(response.data)
             res.json({
-                id: data.graphql.user.full_name,
+                id: data.graphql.user.full_name
                 
             })
         })
         .catch(function(error) {
-            res.json({ result: "false" })
+            res.json({ result: "false its just simple error" })
         })
 }
 
