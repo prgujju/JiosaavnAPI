@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     })
 
         .then(async function (response) {
-            var data = JSON.parse(JSON.stringify(response.data).replace(reqId, "TempID").replace(/&amp;/gi, "&").replace(/&copy;/gi, "©")).TempID
+            var data = JSON.parse(JSON.stringify(response.data)
             res.json({
                  user = input(c+'username : ')
     req = r.get('https://instagram.com/'+user+'/?__a=1')
