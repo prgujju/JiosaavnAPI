@@ -15,14 +15,8 @@ module.exports = async (req, res) => {
         .then(async function (response) {
             var data = JSON.parse(JSON.stringify(response.data)
             res.json({
-                 user = input(c+'username : ')
-    req = r.get('https://instagram.com/'+user+'/?__a=1')
-    name = req.json()['graphql']['user']['full_name']
-    bio = req.json()['graphql']['user']['biography']
-    url = req.json()['graphql']['user']['external_url']
-    post = req.json()['graphql']['user']['edge_owner_to_timeline_media']['count']
-    folwd = req.json()['graphql']['user']['edge_followed_by']['count']
-    folw = req.json()['graphql']['user']['edge_follow']['count']
+                  id: data.graphql..user.full_name,
+              
             })
         })
         .catch(function (error) {
